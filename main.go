@@ -5,7 +5,6 @@ import (
 	"github.com/goQuery/servis"
 )
 
-}
 func main() {
 	servis.Konu()
 	fmt.Println("--------------")
@@ -34,3 +33,4 @@ func main() {
 
 	*/
 
+}
