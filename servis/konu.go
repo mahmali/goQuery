@@ -2,6 +2,7 @@ package servis
 
 import (
 	"fmt"
+	_ "fmt"
 	"github.com/PuerkitoBio/goquery"
 	"log"
 	"net/http"
@@ -25,10 +26,12 @@ func Konu() {
 	}
 
 	// Find the review items. İnceleme öğelerini bulun
-	doc.Find("#icerik > div > table > tbody > tr > td > p:nth-child(1)").Each(func(i int, selection *goquery.Selection) {
-		var konu string
-		konu = selection.Text()
 
-		fmt.Printf(konu)
-	})
+	doc.Find("#icerik > div > table > tbody > tr > td > p:nth-child(1)").Each(
+		func(i int, selection *goquery.Selection) {
+			var konu string
+			konu = selection.Text()
+
+			fmt.Printf(konu)
+		})
 }
